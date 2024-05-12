@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="controls">
+        <button id="startButton">Start</button>
+        <button id="toggleModeButton" class="toggle-mode">Toggle Mode</button>
+        <div class="score">
+            <span id="scoreX">Player X: 0</span>
+            <span id="scoreO">Player O: 0</span>
+        </div>
+        <div class="currentTurn">
+            Current Turn: <span id="turnDisplay">X</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="board">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="log">
+            <h3>Game Log:</h3>
+            <div id="logMessages"></div>
+        </div>
+    </div>
+</body>
+</html>

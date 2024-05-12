@@ -1,0 +1,121 @@
+/* style.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bg-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --bg-color: #000;
+    --text-color: #fff;
+    --box-bg-color: #d3d3d3;
+    --box-border-color: #00f;
+    --x-color: #000; /* Dark mode X color */
+    --o-color: #000; /* Dark mode O color */
+}
+
+body.light-mode {
+    --bg-color: #fff;
+    --text-color: #000;
+    --box-bg-color: #f0f0f0;
+    --box-border-color: #0288d1;
+    --x-color: #fff; /* Light mode X color */
+    --o-color: #fff; /* Light mode O color */
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.score, .currentTurn {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    background-color: var(--bg-color);
+    padding: 10px;
+    border: 5px solid var(--box-border-color);
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    border: 2px solid var(--box-border-color);
+    background-color: var(--box-bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: var(--box-border-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.log {
+    margin-top: 20px;
+    width: 320px;
+    text-align: center;
+}
+
+#logMessages {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 100%;
+    text-align: left;
+}
+
+body.light-mode #logMessages {
+    background-color: #ddd;
+    color: black;
+}
+
+button.toggle-mode {
+    background-color: #666;
+    color: #fff;
+    border-radius: 10px;
+}
+
+body.light-mode button.toggle-mode {
+    background-color: #ddd;
+    color: #333;
+}
